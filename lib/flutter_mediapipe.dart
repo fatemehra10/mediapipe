@@ -22,6 +22,11 @@ class FlutterMediapipe {
         .receiveBroadcastStream()
         .map((buffer) => NormalizedLandmarkList.fromBuffer(buffer));
   }
+  // Future<void> savePicture() async{
+  //   await _methodChannel.invokeMethod("savePicture") as bool;
+  //
+  // }
+
 }
 
 const NAMESPACE = "plugins.sotai.co/flutter_mediapipe";

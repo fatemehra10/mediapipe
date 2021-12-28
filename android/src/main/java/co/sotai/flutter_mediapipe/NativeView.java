@@ -15,6 +15,8 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.camera.core.ImageCapture;
+import androidx.camera.core.ImageCaptureException;
 
 import com.google.mediapipe.components.*;
 import com.google.mediapipe.components.CameraHelper;
@@ -28,9 +30,14 @@ import com.google.mediapipe.framework.Packet;
 import com.google.mediapipe.framework.PacketCallback;
 import com.google.mediapipe.framework.PacketGetter;
 import com.google.mediapipe.glutil.EglManager;
+import com.google.type.Date;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import io.flutter.plugin.common.BinaryMessenger;
@@ -174,11 +181,21 @@ public class NativeView implements PlatformView, MethodCallHandler {
 
         if (call.method.equals("getPlatformVersion")) {
             result.success("Android " + android.os.Build.VERSION.RELEASE);
-        } else {
+        }
+//        else if (call.method.equals("savePicture")){
+//            savePicture();
+//            result.success("TRUE");
+//        }
+        else {
             result.notImplemented();
         }
 
     }
+
+//
+//    public void savePicture(){
+//        System.out.println("SUCCESS");
+//    }
 
     @Override
     public SurfaceView getView() {

@@ -300,8 +300,7 @@ class NormalizedLandmark extends $pb.GeneratedMessage {
 class NormalizedLandmarkList extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NormalizedLandmarkList', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'mediapipe'), createEmptyInstance: create)
     ..pc<NormalizedLandmark>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'landmark', $pb.PbFieldType.PM, subBuilder: NormalizedLandmark.create)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   NormalizedLandmarkList._() : super();
   factory NormalizedLandmarkList({
